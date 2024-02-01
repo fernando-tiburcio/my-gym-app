@@ -3,6 +3,7 @@ import React from 'react';
 import { Accordion, H3, Paragraph, ScrollView, Separator, Square, Text, YStack } from 'tamagui';
 
 import WorkoutCard from '@/components/workoutCard';
+import workoutData from '@/data/workout.json';
 
 export default function WorkoutsScreen() {
   return (
@@ -15,79 +16,39 @@ export default function WorkoutsScreen() {
       </Text>
       <Separator mt="$4" borderColor="#00C896" width="80%" alignSelf="center" borderWidth="$0.25" />
       <H3 textAlign="center" mt="$2">
-        Treino A - B - C
+        {workoutData.workout_type}
       </H3>
       <ScrollView scrollEnabled paddingHorizontal="$2">
         <Accordion type="single" defaultValue="a1" collapsible mt="$4" space="$6">
-          <Accordion.Item value="a1">
-            <Accordion.Trigger flexDirection="row" justifyContent="space-between">
-              {({ open }: never) => (
-                <>
-                  <Paragraph>Treino A</Paragraph>
-                  <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                    <Ionicons name="chevron-down-circle" size={32} color="#00C896" />
-                  </Square>
-                </>
-              )}
-            </Accordion.Trigger>
-            <Accordion.Content>
-              <ScrollView horizontal p="$4" scrollEnabled space="$4">
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-              </ScrollView>
-            </Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item value="a2">
-            <Accordion.Trigger flexDirection="row" justifyContent="space-between">
-              {({ open }: never) => (
-                <>
-                  <Paragraph>Treino B</Paragraph>
-                  <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                    <Ionicons name="chevron-down-circle" size={32} color="#00C896" />
-                  </Square>
-                </>
-              )}
-            </Accordion.Trigger>
-            <Accordion.Content>
-              <ScrollView horizontal p="$4" scrollEnabled space="$4">
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-              </ScrollView>
-            </Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item value="a3">
-            <Accordion.Trigger flexDirection="row" justifyContent="space-between">
-              {({ open }: never) => (
-                <>
-                  <Paragraph>Treino C</Paragraph>
-                  <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                    <Ionicons name="chevron-down-circle" size={32} color="#00C896" />
-                  </Square>
-                </>
-              )}
-            </Accordion.Trigger>
-            <Accordion.Content>
-              <ScrollView horizontal p="$4" scrollEnabled space="$4">
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-                <WorkoutCard />
-              </ScrollView>
-            </Accordion.Content>
-          </Accordion.Item>
+          {Object.values(workoutData.workout_specification).map((workout) => {
+            console.log('🚀 ~ {Object.entries ~ workout:', workout.workout_title);
+
+            return (
+              <Accordion.Item value={workout.workout_title} key={workout.workout_title}>
+                <Accordion.Trigger flexDirection="row" justifyContent="space-between">
+                  {({ open }: never) => (
+                    <>
+                      <Paragraph>{workout.workout_title}</Paragraph>
+                      <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
+                        <Ionicons name="chevron-down-circle" size={32} color="#00C896" />
+                      </Square>
+                    </>
+                  )}
+                </Accordion.Trigger>
+                <Accordion.Content>
+                  <ScrollView horizontal p="$4" scrollEnabled space="$4">
+                    <WorkoutCard />
+                    <WorkoutCard />
+                    <WorkoutCard />
+                    <WorkoutCard />
+                    <WorkoutCard />
+                    <WorkoutCard />
+                    <WorkoutCard />
+                  </ScrollView>
+                </Accordion.Content>
+              </Accordion.Item>
+            );
+          })}
         </Accordion>
       </ScrollView>
       <Text color="$gray10" ta="center" mt="$4" mb="$2">

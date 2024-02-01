@@ -1,6 +1,8 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Constants from 'expo-constants';
 import { Tabs } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { Platform, StyleSheet } from 'react-native';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -10,41 +12,50 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
+  const tabBarHeight = Platform.select({
+    ios: 100,
+    android: 70,
+  });
+
+  const statusBarHeight = Constants.statusBarHeight;
+
   return (
-    <Tabs
-      screenOptions={{
-        headerStyle: { backgroundColor: '#000' },
-        headerTintColor: '#00C896',
-        headerTitleStyle: { fontSize: 24 },
-        tabBarStyle: {
-          backgroundColor: '#000',
-          height: 100,
-        },
-        tabBarActiveTintColor: '#00c896',
-        tabBarLabelStyle: { fontSize: 14 },
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Workouts',
-          tabBarIcon: ({ color }) => <TabBarIcon name="external-link" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="performance"
-        options={{
-          title: 'Performance',
-          tabBarIcon: ({ color }) => <TabBarIcon name="bar-chart" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="user-o" color={color} />,
-        }}
-      />
-    </Tabs>
+    <>
+      <StatusBar style="light" />
+      <Tabs
+        sceneContainerStyle={{ paddingTop: statusBarHeight, backgroundColor: '#000' }}
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: {
+            backgroundColor: '#000',
+            height: tabBarHeight,
+          },
+          tabBarActiveTintColor: '#00c896',
+          tabBarLabelStyle: { fontSize: 14 },
+        }}>
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Workouts',
+            tabBarIcon: ({ color }) => <TabBarIcon name="external-link" color={color} />,
+          }}
+        />
+        <Tabs.Screen
+          name="performance"
+          options={{
+            title: 'Performance',
+            tabBarIcon: ({ color }) => <TabBarIcon name="bar-chart" color={color} />,
+          }}
+        />
+        <Tabs.Screen
+          name="profile"
+          options={{
+            title: 'Profile',
+            tabBarIcon: ({ color }) => <TabBarIcon name="user-o" color={color} />,
+          }}
+        />
+      </Tabs>
+    </>
   );
 }
 
