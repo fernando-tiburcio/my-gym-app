@@ -1,6 +1,8 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+import { SplashScreen, Stack, router } from 'expo-router';
 import React, { useEffect } from 'react';
+import { TouchableOpacity } from 'react-native';
 import { TamaguiProvider } from 'tamagui';
 
 import config from '../tamagui.config';
@@ -31,7 +33,25 @@ export default function RootLayout() {
       <TamaguiProvider config={config}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          <Stack.Screen
+            name="workout/workoutDetails"
+            options={{
+              presentation: 'modal',
+              title: 'Detalhes do Treino',
+              headerTitleStyle: { color: '#00C896' },
+              headerStyle: {
+                backgroundColor: '#000',
+              },
+              headerLeft: () => (
+                <TouchableOpacity onPress={() => router.back()}>
+                  <Ionicons name="close" size={24} color="#00C896" />
+                </TouchableOpacity>
+              ),
+              contentStyle: {
+                backgroundColor: '#000',
+              },
+            }}
+          />
         </Stack>
       </TamaguiProvider>
     </>
