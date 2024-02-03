@@ -3,247 +3,227 @@
   "workout_steps": 3,
   "workout_specification": [
     {
-      "Treino A": {
-        "workout_title": "Treino A",
-        "exercises": {
-          "back": {
-            "01": {
-              "title": "Remada Baixa",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Remada Alta",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "03": {
-              "title": "Elevação Terra",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 30,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "04": {
-              "title": "Remada Unilateral no Banco",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 12,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "shoulders": {
-            "01": {
-              "title": "Elevação Lateral",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Elevação Frontal",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "biceps": {
-            "01": {
-              "title": "Rosca Direta",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Banco Scotch",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "03": {
-              "title": "Rosca Martelo Alternada com Alteres",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 30,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "cardio": {
-            "01": {
-              "title": "Bicicleta",
-              "repetitions": 1,
-              "series": 1,
-              "weight": 0,
-              "dificulty": "medium",
-              "notes": "20 minutos"
-            }
-          }
+      "workout_title": "Treino A",
+      "exercises": [
+        {
+          "title": "Remada Baixa",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Remada Alta",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Elevação Terra",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 30,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Remada Unilateral no Banco",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 12,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Elevação Lateral",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Elevação Frontal",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Rosca Direta",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Banco Scotch",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Rosca Martelo Alternada com Alteres",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 30,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Bicicleta",
+          "repetitions": 1,
+          "series": 1,
+          "weight": 0,
+          "dificulty": "medium",
+          "notes": "20 minutos"
         }
-      },
-      "Treino B": {
-        "workout_title": "Treino A",
-        "exercises": {
-          "legs": {
-            "01": {
-              "title": "LegPress 45",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 60,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Extensora",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 30,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "03": {
-              "title": "Flexo Extensora",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 30,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "04": {
-              "title": "Agachamento Livre",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "05": {
-              "title": "Abdução Coxas",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "06": {
-              "title": "Elevação Pélvica",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 40,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "07": {
-              "title": "Panturrilha Banco",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 40,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "cardio": {
-            "01": {
-              "title": "Bicicleta",
-              "repetitions": 1,
-              "series": 1,
-              "weight": 0,
-              "dificulty": "medium",
-              "notes": "10 minutos"
-            },
-            "02": {
-              "title": "Esteira",
-              "repetitions": 1,
-              "series": 1,
-              "weight": 0,
-              "dificulty": "medium",
-              "notes": "10 minutos"
-            }
-          }
+      ]
+    },
+    {
+      "workout_title": "Treino B",
+      "exercises": [
+        {
+          "title": "LegPress 45",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 60,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Extensora",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 30,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Flexo Extensora",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 30,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Agachamento Livre",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Abdução Coxas",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Elevação Pélvica",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 40,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Panturrilha Banco",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 40,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Bicicleta",
+          "repetitions": 1,
+          "series": 1,
+          "weight": 0,
+          "dificulty": "medium",
+          "notes": "10 minutos"
+        },
+        {
+          "title": "Esteira",
+          "repetitions": 1,
+          "series": 1,
+          "weight": 0,
+          "dificulty": "medium",
+          "notes": "10 minutos"
         }
-      },
-      "Treino C": {
-        "workout_title": "Treino A",
-        "exercises": {
-          "chest": {
-            "01": {
-              "title": "Supino Reto",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Supino Inclinado",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "03": {
-              "title": "PeckDeck",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 30,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "04": {
-              "title": "Fly com Alteres no Banco",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 12,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "triceps": {
-            "01": {
-              "title": "Pulley",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            },
-            "02": {
-              "title": "Tríceps Corda",
-              "repetitions": 15,
-              "series": 3,
-              "weight": 20,
-              "dificulty": "medium",
-              "notes": ""
-            }
-          },
-          "cardio": {
-            "01": {
-              "title": "Esteira",
-              "repetitions": 1,
-              "series": 1,
-              "weight": 0,
-              "dificulty": "medium",
-              "notes": "20 minutos"
-            }
-          }
+      ]
+    },
+    {
+      "workout_title": "Treino C",
+      "exercises": [
+        {
+          "title": "Supino Reto",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Supino Inclinado",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "PeckDeck",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 30,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Fly com Alteres no Banco",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 12,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Pulley",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Tríceps Corda",
+          "repetitions": 15,
+          "series": 3,
+          "weight": 20,
+          "dificulty": "medium",
+          "notes": ""
+        },
+        {
+          "title": "Esteira",
+          "repetitions": 1,
+          "series": 1,
+          "weight": 0,
+          "dificulty": "medium",
+          "notes": "20 minutos"
         }
-      }
+      ]
     }
   ]
 }
