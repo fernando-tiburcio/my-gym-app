@@ -1,5 +1,9 @@
-import { H1 } from 'tamagui';
+import { H1, H3, YStack } from 'tamagui';
 
 export default function PerformanceScreen() {
-  return <H1>Performance Screen</H1>;
+  return (
+    <YStack ai="center" mt="$4">
+      <H3>Performance Screen</H3>
+    </YStack>
+  );
 }
