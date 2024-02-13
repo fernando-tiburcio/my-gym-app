@@ -1,4 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import { Link } from 'expo-router';
 import React from 'react';
 import { Accordion, H3, Paragraph, ScrollView, Separator, Square, Text, YStack } from 'tamagui';
@@ -13,9 +15,15 @@ export default function WorkoutsScreen() {
         Bem vindo de volta, Fernando!
       </Text>
       <Text color="$gray9" mt="$2" textAlign="center">
-        {new Date(Date.now()).toLocaleString()}
+        {format(new Date(Date.now()), 'PPPP', { locale: ptBR })}
       </Text>
-      <Separator mt="$4" borderColor="#00C896" width="80%" alignSelf="center" borderWidth="$0.25" />
+      <Separator
+        mt="$4"
+        borderColor="$primaryGreen"
+        width="80%"
+        alignSelf="center"
+        borderWidth="$0.25"
+      />
       <H3 textAlign="center" mt="$2">
         {workoutData.workout_type}
       </H3>
