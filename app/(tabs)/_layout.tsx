@@ -34,23 +34,23 @@ export default function TabLayout() {
           tabBarLabelStyle: { fontSize: 14 },
         }}>
         <Tabs.Screen
-          name="index"
+          name="home"
           options={{
-            title: 'Workouts',
+            title: 'Treinos',
             tabBarIcon: ({ color }) => <TabBarIcon name="external-link" color={color} />,
           }}
         />
         <Tabs.Screen
           name="performance"
           options={{
-            title: 'Performance',
+            title: 'Desempenho',
             tabBarIcon: ({ color }) => <TabBarIcon name="bar-chart" color={color} />,
           }}
         />
         <Tabs.Screen
           name="profile"
           options={{
-            title: 'Profile',
+            title: 'Perfil',
             tabBarIcon: ({ color }) => <TabBarIcon name="user-o" color={color} />,
           }}
         />

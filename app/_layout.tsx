@@ -3,7 +3,7 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack, router } from 'expo-router';
 import React, { useEffect } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { TamaguiProvider } from 'tamagui';
+import { TamaguiProvider, Theme } from 'tamagui';
 
 import config from '../tamagui.config';
 
@@ -31,28 +31,38 @@ export default function RootLayout() {
   return (
     <>
       <TamaguiProvider config={config}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="workout/workoutDetails"
-            options={{
-              presentation: 'modal',
-              title: 'Detalhes do Treino',
-              headerTitleStyle: { color: '#00C896' },
-              headerStyle: {
-                backgroundColor: '#000',
-              },
-              headerLeft: () => (
-                <TouchableOpacity onPress={() => router.back()}>
-                  <Ionicons name="close" size={24} color="#00C896" />
-                </TouchableOpacity>
-              ),
-              contentStyle: {
-                backgroundColor: '#000',
-              },
-            }}
-          />
-        </Stack>
+        <Theme name="dark">
+          <Stack>
+            <Stack.Screen name="index" redirect />
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="workout/workoutDetails"
+              options={{
+                presentation: 'modal',
+                title: 'Detalhes do Treino',
+                headerTitleStyle: { color: '#00C896' },
+                headerStyle: {
+                  backgroundColor: '#000',
+                },
+                headerLeft: () => (
+                  <TouchableOpacity onPress={() => router.back()}>
+                    <Ionicons name="close" size={24} color="#00C896" />
+                  </TouchableOpacity>
+                ),
+                contentStyle: {
+                  backgroundColor: '#000',
+                },
+              }}
+            />
+            <Stack.Screen
+              name="timerModal"
+              options={{
+                presentation: 'modal',
+                headerShown: false,
+              }}
+            />
+          </Stack>
+        </Theme>
       </TamaguiProvider>
     </>
   );
