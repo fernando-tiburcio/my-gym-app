@@ -18,7 +18,7 @@
           "repetitions": 15,
           "series": 3,
           "weight": 20,
-          "dificulty": "medium",
+          "dificulty": "hard",
           "notes": ""
         },
         {
@@ -26,7 +26,7 @@
           "repetitions": 15,
           "series": 3,
           "weight": 30,
-          "dificulty": "medium",
+          "dificulty": "easy",
           "notes": ""
         },
         {
@@ -34,7 +34,7 @@
           "repetitions": 15,
           "series": 3,
           "weight": 12,
-          "dificulty": "medium",
+          "dificulty": "hard",
           "notes": ""
         },
         {
@@ -180,7 +180,7 @@
           "repetitions": 15,
           "series": 3,
           "weight": 20,
-          "dificulty": "medium",
+          "dificulty": "hard",
           "notes": ""
         },
         {
@@ -188,7 +188,7 @@
           "repetitions": 15,
           "series": 3,
           "weight": 30,
-          "dificulty": "medium",
+          "dificulty": "easy",
           "notes": ""
         },
         {
