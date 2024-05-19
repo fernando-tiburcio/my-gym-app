@@ -17,13 +17,7 @@ export default function WorkoutsScreen() {
       <Text color="$gray9" mt="$2" textAlign="center">
         {format(new Date(Date.now()), 'PPPP', { locale: ptBR })}
       </Text>
-      <Separator
-        mt="$4"
-        borderColor="$primaryGreen"
-        width="80%"
-        alignSelf="center"
-        borderWidth="$0.25"
-      />
+      <Separator mt="$4" borderColor="$primaryGreen" width="80%" alignSelf="center" />
       <H3 textAlign="center" mt="$2">
         {workoutData.workout_type}
       </H3>

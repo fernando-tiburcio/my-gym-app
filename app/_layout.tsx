@@ -6,6 +6,7 @@ import { TouchableOpacity } from 'react-native';
 import { TamaguiProvider, Theme } from 'tamagui';
 
 import config from '../tamagui.config';
+import { StatusBar } from 'expo-status-bar';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -32,6 +33,7 @@ export default function RootLayout() {
     <>
       <TamaguiProvider config={config}>
         <Theme name="dark">
+          <StatusBar style="auto" />
           <Stack>
             <Stack.Screen name="index" redirect />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

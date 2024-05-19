@@ -21,7 +21,6 @@ export default function TabLayout() {
 
   return (
     <>
-      <StatusBar style="light" />
       <Tabs
         sceneContainerStyle={{ paddingTop: statusBarHeight, backgroundColor: '#000' }}
         screenOptions={{
